@@ -95,6 +95,18 @@ export default {
     width: 100%;
     align-items: center;
   }
+  @media (max-width: 700px) {
+    .hello{
+      display: flex;
+      flex-direction: column;
+      height: 140px;
+      width: 400px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding:8px;
+    }
+  }
   .hello{
     display: flex;
     flex-direction: column;
