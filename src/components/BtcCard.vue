@@ -13,7 +13,7 @@
         <!-- binding for dynamic color classname by current price value -->
         <h3 v-bind:class="[color]">
           <!-- diplay formated data using numberWithCommas func -->
-          &#36; {{this.numberWithCommas(currPrice?.bpi?.USD.rate_float.toFixed(2))}}
+          &#36; {{this.numberWithCommas(currPrice?.bpi?.USD.rate_float.toFixed(2))||price}}
         </h3>
       </div>
     </div>
@@ -52,6 +52,8 @@ export default {
       }
     }
   },
+
+  props:['price'],
 
   methods:{
     //fetching data with axios

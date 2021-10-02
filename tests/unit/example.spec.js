@@ -1,12 +1,15 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import BtcCard from '@/components/BtcCard.vue'
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg }
+describe('BtcCard.vue', () => {
+  it('renders price ', () => {
+    const wrapper = shallowMount(BtcCard, {
+      props: { price:3000 }
     })
-    expect(wrapper.text()).toMatch(msg)
+    //check is price rendered
+    expect(wrapper.find('div.content').text()).not.toEqual('$','')
+    
+    //check is price rendered right.
+    // expect(wrapper.find('div.content').text()).toMatch('$ 3000')
   })
 })
